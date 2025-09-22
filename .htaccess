@@ -1,0 +1,11 @@
+AuthType Basic
+AuthName "Restricted Area"
+AuthUserFile /var/www/html/old-realfollowers.fr/.htpasswd
+Require valid-user
+
+# Allow access to CSS, JS, and image files without authentication
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot)$">
+    Order allow,deny
+    Allow from all
+    Satisfy any
+</FilesMatch>
